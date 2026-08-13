@@ -44,5 +44,5 @@ este projeto segue [Semantic Versioning](https://semver.org/lang/pt-BR/).
 
 ### Pendente
 
-- Deploy e cron remoto: primeiro `bun run deploy` (migra o D1 remoto) e
-  configuração das secrets (`wrangler secret put MASTER_KEY`, `BETTER_AUTH_SECRET`).
+- Nada em aberto no código. Deploy em produção ativo em
+  https://tabelainvest.ianptkcs-023.workers.dev com cron diário `0 6 * * *`.

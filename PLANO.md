@@ -152,8 +152,9 @@ Funcionalidades:
 
 ## Fases de implementação
 
-> Status (2026-08-12): fases 1–5 concluídas. Falta só o deploy (cron remoto +
-> secrets) e o repo no GitHub.
+> Status (2026-08-13): projeto completo, deploy em produção ativo
+> (https://tabelainvest.ianptkcs-023.workers.dev) e repo público
+> (https://github.com/TabelaDev/tabelainvest).
 
 1. **Scaffold** — ✅ base do tabelafin (config, auth, layout, landing, PWA,
    scripts), D1/KV bindings reais. Repo `~/codigo/tabeladev/tabelainvest`.
@@ -171,7 +172,7 @@ Funcionalidades:
    ativo (`/api/chat`), streaming SSE, dispatch `fetch()` sem SDK.
    UI: painel no screener e na página de detalhe.
 6. **Docs e testes** — ✅ README bilíngue, CONTRIBUTING, CHANGELOG,
-   `check`/`lint`/`test`/`build` verdes. Pendente: deploy remoto + GitHub.
+   `check`/`lint`/`test`/`build` verdes. Deploy ativo + repo público no GitHub.
 
 ## Riscos
 
