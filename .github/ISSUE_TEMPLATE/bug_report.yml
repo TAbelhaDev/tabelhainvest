@@ -1,5 +1,5 @@
 name: Bug report
-description: Reportar um comportamento incorreto no tabelafin
+description: Reportar um comportamento incorreto no tabelainvest
 labels: ['bug']
 body:
   - type: textarea
@@ -14,7 +14,7 @@ body:
     attributes:
       label: Passos para reproduzir
       placeholder: |
-        1. Rode 'tabelafin ...'
+        1. Abra o screener e filtre por '...'
         2. Navegue até '...'
         3. Veja o erro
     validations:
@@ -23,7 +23,7 @@ body:
     id: environment
     attributes:
       label: Ambiente
-      placeholder: SO, terminal/emulador, versão do tabelafin (ou do Go, se compilado do source)
+      placeholder: Navegador e versão, sistema operacional, URL da página onde o erro aparece.
     validations:
       required: false
   - type: textarea

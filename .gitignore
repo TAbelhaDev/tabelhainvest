@@ -36,3 +36,8 @@ vite.config.ts.timestamp-*
 
 # scratch de debug
 tmp-*
+
+# Config de rede local (esta máquina usa mirror npmmirror porque o
+# registry.npmjs.org resolve só IPv6 aqui). Não commitar — o CI/contribuidores
+# devem usar o registry padrão.
+bunfig.toml

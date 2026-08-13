@@ -1,4 +1,4 @@
-# Contributing to Tabelafin
+# Contributing to TabelaInvest
 
 **English** · [Português](CONTRIBUTING.pt-BR.md)
 

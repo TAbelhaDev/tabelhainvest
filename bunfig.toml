@@ -1,8 +1,0 @@
-# Nesta rede, `registry.npmjs.org` resolve apenas para IPv6 (sem rota IPv6
-# funcionando), então `bun install` pendura nos downloads de tarballs — o
-# metadata dos pacotes aponta os tarballs pro `.org`, e não há flag do bun pra
-# forçar IPv4. `registry.npmmirror.com` é o mirror oficial do npm (mesmo
-# conteúdo), resolve IPv4 e os tarballs apontam pro próprio mirror. Se a sua
-# rede tiver IPv6 OK, remova este arquivo e use o registry default.
-[install]
-registry = "https://registry.npmmirror.com"

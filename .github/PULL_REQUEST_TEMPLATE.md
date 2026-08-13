@@ -8,4 +8,5 @@
 
 ## Checklist
 
-- [ ] Rodei `go vet ./...`, `go test ./...` e `go build ./...` localmente
+- [ ] Rodei `bun run check`, `bun run lint`, `bun run test` e `bun run build` localmente
+- [ ] A mudança segue a convenção de linguagem do [CONTRIBUTING.md](CONTRIBUTING.md#language)

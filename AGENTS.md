@@ -31,9 +31,11 @@ PLANO.md §Camada de dados. O browser nunca fala direto com o investidor10.
 
 ## Registry npm
 
-O `bunfig.toml` do repo aponta pro mirror `registry.npmmirror.com` porque nesta
-rede `registry.npmjs.org` resolve só pra IPv6 (sem rota IPv6) e o `bun install`
-pendura. Se a sua rede tiver IPv6 OK, pode remover o `bunfig.toml`.
+O `bunfig.toml` na raiz é **gitignored** e **só existe localmente nesta máquina**:
+aponta pro mirror `registry.npmmirror.com` porque aqui o `registry.npmjs.org`
+resolve só IPv6 e o `bun install` pendura nos tarballs. Se a sua rede tiver
+IPv6 OK, não crie esse arquivo — use o registry padrão. O `bun.lock` commitado
+pode conter URLs do mirror; o bun reescreve conforme o registry ativo.
 
 ## Rodando dev
 
