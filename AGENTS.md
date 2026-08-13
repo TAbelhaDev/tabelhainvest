@@ -63,9 +63,10 @@ Antes de abrir PR: `bun run check && bun run lint && bun run test && bun run bui
 - `api/chat` — chat por ativo (SSE, BYOK). `api/analyze` — análise do conjunto
   filtrado (SSE, BYOK). Ambos leem a credencial em `ai_credentials` e usam o
   dispatch em `src/lib/server/ai/` (sem SDK, só `fetch()`).
-- `api/dev/refresh` — **dev only**: dispara o sync do investidor10
-  (cotações/indicadores/proventos) sob demanda. `?limit=N` corta cada fase
-  (útil no primeiro run). Nunca vaza pra produção (`dev` check).
+- `api/refresh` — dispara o sync do investidor10 (cotações/indicadores/
+  proventos) sob demanda. Em dev não exige token; em produção exige header
+  `x-refresh-token` == `REFRESH_TOKEN`. `?limit=N` corta cada fase (útil no
+  primeiro run). Usado pro bootstrap inicial de dados e manutenção.
 
 ## Testes
 

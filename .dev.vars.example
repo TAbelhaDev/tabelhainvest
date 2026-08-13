@@ -6,3 +6,5 @@
 MASTER_KEY=placeholder
 BETTER_AUTH_SECRET=placeholder
 BETTER_AUTH_URL=http://localhost:5173
+# Token do endpoint /api/refresh (produção). Em dev não é exigido.
+REFRESH_TOKEN=placeholder
