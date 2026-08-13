@@ -1,0 +1,53 @@
+import prettier from 'eslint-config-prettier';
+import path from 'node:path';
+import js from '@eslint/js';
+import svelte from 'eslint-plugin-svelte';
+import { defineConfig, includeIgnoreFile } from 'eslint/config';
+import globals from 'globals';
+import ts from 'typescript-eslint';
+
+const gitignorePath = path.resolve(import.meta.dirname, '.gitignore');
+
+export default defineConfig(
+	includeIgnoreFile(gitignorePath),
+	{ ignores: ['worker-configuration.d.ts'] },
+	js.configs.recommended,
+	ts.configs.recommended,
+	svelte.configs.recommended,
+	prettier,
+	svelte.configs.prettier,
+	{
+		languageOptions: { globals: { ...globals.browser, ...globals.node } },
+		rules: {
+			// typescript-eslint strongly recommend that you do not use the no-undef lint rule on TypeScript projects.
+			// see: https://typescript-eslint.io/troubleshooting/faqs/eslint/#i-get-errors-from-the-no-undef-rule-about-global-variables-not-being-defined-even-though-there-are-no-typescript-errors
+			'no-undef': 'off',
+			// Handler assinaturas (ex.: `scheduled(_event, _env, _ctx)` no
+			// worker/entry.js) declaram params que o corpo ainda não usa.
+			'@typescript-eslint/no-unused-vars': [
+				'error',
+				{ argsIgnorePattern: '^_', varsIgnorePattern: '^_' }
+			]
+		}
+	},
+	{
+		files: ['**/*.svelte', '**/*.svelte.ts', '**/*.svelte.js'],
+		languageOptions: {
+			parserOptions: {
+				projectService: true,
+				extraFileExtensions: ['.svelte'],
+				parser: ts.parser
+			}
+		}
+	},
+	{
+		// worker/entry.js referencia svelte-kit-worker.d.ts via triple-slash de
+		// propósito — é a única forma de o TS aplicar uma ambient module
+		// declaration (fallback de resolução pro import relativo do _worker.js
+		// gerado em build time) sem trocar `import` por `require` dinâmico.
+		files: ['worker/**'],
+		rules: {
+			'@typescript-eslint/triple-slash-reference': 'off'
+		}
+	}
+);

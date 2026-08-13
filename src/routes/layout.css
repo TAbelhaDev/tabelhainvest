@@ -1,0 +1,258 @@
+@import 'tailwindcss';
+@import '@tabeladev/tabelawebui/theme.css';
+@import '@fontsource-variable/jetbrains-mono';
+@import '@fontsource-variable/newsreader';
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Design system: "reading someone's source file" — mesma estética do
+ * portfolio. Mono leva a estrutura (labels, datas, valores); bordas afiadas e
+ * bem definidas; accent green (data-accent no app.html), nunca azul — glow e
+ * gradiente da landing saem da mesma cor.
+ * Palette: Catppuccin (Latte / Mocha).
+ */
+
+/* ── Catppuccin Latte (tema claro) ───────────────────────────────────────── */
+:root {
+	/* Tokens vêm da lib @tabeladev/tabelawebui (theme.css) — uma fonte de verdade. */
+	--ctp-base: var(--twui-latte-base, #eff1f5);
+	--ctp-mantle: var(--twui-latte-mantle, #e6e9ef);
+	--ctp-crust: var(--twui-latte-crust, #dce0e8);
+	--ctp-surface0: var(--twui-latte-surface0, #ccd0da);
+	--ctp-surface1: var(--twui-latte-surface1, #bcc0cc);
+	--ctp-surface2: var(--twui-latte-surface2, #acb0be);
+	--ctp-overlay0: var(--twui-latte-overlay0, #9ca0b0);
+	--ctp-overlay1: var(--twui-latte-overlay1, #8c8fa1);
+	--ctp-overlay2: var(--twui-latte-overlay2, #7c7f93);
+	--ctp-subtext0: var(--twui-latte-subtext0, #6c6f85);
+	--ctp-subtext1: var(--twui-latte-subtext1, #5c5f77);
+	--ctp-text: var(--twui-latte-text, #4c4f69);
+	--ctp-rosewater: var(--twui-rosewater, #dc8a78);
+	--ctp-flamingo: var(--twui-flamingo, #dd7878);
+	--ctp-pink: var(--twui-pink, #ea76cb);
+	--ctp-mauve: var(--twui-mauve, #8839ef);
+	--ctp-red: var(--twui-red, #d20f39);
+	--ctp-maroon: var(--twui-maroon, #e64553);
+	--ctp-peach: var(--twui-peach, #fe640b);
+	--ctp-yellow: var(--twui-yellow, #df8e1d);
+	--ctp-green: var(--twui-green, #40a02b);
+	--ctp-teal: var(--twui-teal, #179299);
+	--ctp-sky: var(--twui-sky, #04a5e5);
+	--ctp-sapphire: var(--twui-sapphire, #209fb5);
+	--ctp-blue: var(--twui-blue, #1e66f5);
+	--ctp-lavender: var(--twui-lavender, #7287fd);
+
+	/* Tokens do design system (espelham a lib) */
+	--paper: var(--twui-paper);
+	--paper-raised: var(--twui-paper-raised);
+	--ink: var(--twui-ink);
+	--ink-soft: var(--twui-ink-soft);
+	--ink-faint: var(--twui-ink-faint);
+	--rule: var(--twui-rule);
+	--accent: var(--twui-accent);
+	--accent-soft: var(--twui-accent-soft);
+	--signal: var(--twui-signal);
+	--signal-soft: var(--twui-signal-soft);
+	--danger: var(--twui-danger);
+	--danger-soft: color-mix(in oklab, var(--twui-danger) 14%, var(--twui-paper));
+	/* Landing: acento escurecido — o green Latte cru dá 2.96:1 sobre a Base e
+	   reprova AA em texto pequeno; este dá 5.80:1. */
+	--accent-ink: #276b1a;
+	--shadow-glow:
+		0 0 0 1px var(--ctp-green),
+		0 20px 50px -20px color-mix(in oklab, var(--ctp-green) 45%, transparent);
+	--gradient-hero: radial-gradient(
+		ellipse 80% 60% at 50% -10%,
+		color-mix(in oklab, var(--ctp-green) 14%, transparent),
+		transparent 70%
+	);
+
+	--radius: 0.375rem; /* afiado */
+
+	/* A lib aponta a serif pra "Newsreader"; aqui ela vem self-hosted do
+	   @fontsource-variable, que registra a família como "Newsreader Variable". */
+	--twui-font-serif: 'Newsreader Variable', ui-serif, Georgia, serif;
+}
+
+/* ── Catppuccin Mocha (tema escuro) ──────────────────────────────────────── */
+.dark {
+	--ctp-base: var(--twui-mocha-base, #1e1e2e);
+	--ctp-mantle: var(--twui-mocha-mantle, #181825);
+	--ctp-crust: var(--twui-mocha-crust, #11111b);
+	--ctp-surface0: var(--twui-mocha-surface0, #313244);
+	--ctp-surface1: var(--twui-mocha-surface1, #45475a);
+	--ctp-surface2: var(--twui-mocha-surface2, #585b70);
+	--ctp-overlay0: var(--twui-mocha-overlay0, #6c7086);
+	--ctp-overlay1: var(--twui-mocha-overlay1, #7f849c);
+	--ctp-overlay2: var(--twui-mocha-overlay2, #9399b2);
+	--ctp-subtext0: var(--twui-mocha-subtext0, #a6adc8);
+	--ctp-subtext1: var(--twui-mocha-subtext1, #bac2de);
+	--ctp-text: var(--twui-mocha-text, #cdd6f4);
+	--ctp-rosewater: var(--twui-rosewater, #f5e0dc);
+	--ctp-flamingo: var(--twui-flamingo, #f2cdcd);
+	--ctp-pink: var(--twui-pink, #f5c2e7);
+	--ctp-mauve: var(--twui-mauve, #cba6f7);
+	--ctp-red: var(--twui-red, #f38ba8);
+	--ctp-maroon: var(--twui-maroon, #eba0ac);
+	--ctp-peach: var(--twui-peach, #fab387);
+	--ctp-yellow: var(--twui-yellow, #f9e2af);
+	--ctp-green: var(--twui-green, #a6e3a1);
+	--ctp-teal: var(--twui-teal, #94e2d5);
+	--ctp-sky: var(--twui-sky, #89dceb);
+	--ctp-sapphire: var(--twui-sapphire, #74c7ec);
+	--ctp-blue: var(--twui-blue, #89b4fa);
+	--ctp-lavender: var(--twui-lavender, #b4befe);
+
+	--paper: var(--twui-paper);
+	--paper-raised: var(--twui-paper-raised);
+	--ink: var(--twui-ink);
+	--ink-soft: var(--twui-ink-soft);
+	--ink-faint: var(--twui-ink-faint);
+	--rule: var(--twui-rule);
+	--accent: var(--twui-accent);
+	--accent-soft: var(--twui-accent-soft);
+	--signal: var(--twui-signal);
+	--signal-soft: var(--twui-signal-soft);
+
+	/* Landing — o green Mocha já é ~11:1 sobre a Base */
+	--accent-ink: var(--ctp-green);
+	--shadow-glow:
+		0 0 0 1px var(--ctp-green),
+		0 20px 50px -20px color-mix(in oklab, var(--ctp-green) 55%, transparent);
+	--gradient-hero: radial-gradient(
+		ellipse 80% 60% at 50% -10%,
+		color-mix(in oklab, var(--ctp-green) 22%, transparent),
+		transparent 70%
+	);
+
+	--danger: var(--twui-danger);
+	--danger-soft: color-mix(in oklab, var(--twui-danger) 14%, var(--twui-paper));
+}
+
+/* Estética do app é mono: sobrescreve a serif default da lib só no
+   ChatMessage (que usa --twui-font-serif no corpo das mensagens). As seções
+   de landing mantêm a serif da lib (Newsreader) — mesmo modelo da landing
+   do TabelaRPGDK. */
+.twui-chat-message-bubble {
+	--twui-font-serif:
+		'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+/* Expor as cores como utilitários Tailwind */
+@theme inline {
+	--font-mono: 'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+	--font-sans: 'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+	--color-paper: var(--paper);
+	--color-paper-raised: var(--paper-raised);
+	--color-ink: var(--ink);
+	--color-ink-soft: var(--ink-soft);
+	--color-ink-faint: var(--ink-faint);
+	--color-rule: var(--rule);
+	--color-accent: var(--accent);
+	--color-accent-soft: var(--accent-soft);
+	--color-accent-ink: var(--accent-ink);
+	--color-signal: var(--signal);
+	--color-signal-soft: var(--signal-soft);
+	--color-danger: var(--danger);
+	--color-danger-soft: var(--danger-soft);
+
+	--color-ctp-base: var(--ctp-base);
+	--color-ctp-mantle: var(--ctp-mantle);
+	--color-ctp-crust: var(--ctp-crust);
+	--color-ctp-surface0: var(--ctp-surface0);
+	--color-ctp-surface1: var(--ctp-surface1);
+	--color-ctp-surface2: var(--ctp-surface2);
+	--color-ctp-overlay0: var(--ctp-overlay0);
+	--color-ctp-overlay1: var(--ctp-overlay1);
+	--color-ctp-overlay2: var(--ctp-overlay2);
+	--color-ctp-subtext0: var(--ctp-subtext0);
+	--color-ctp-subtext1: var(--ctp-subtext1);
+	--color-ctp-text: var(--ctp-text);
+	--color-ctp-rosewater: var(--ctp-rosewater);
+	--color-ctp-flamingo: var(--ctp-flamingo);
+	--color-ctp-pink: var(--ctp-pink);
+	--color-ctp-mauve: var(--ctp-mauve);
+	--color-ctp-red: var(--ctp-red);
+	--color-ctp-maroon: var(--ctp-maroon);
+	--color-ctp-peach: var(--ctp-peach);
+	--color-ctp-yellow: var(--ctp-yellow);
+	--color-ctp-green: var(--ctp-green);
+	--color-ctp-teal: var(--ctp-teal);
+	--color-ctp-sky: var(--ctp-sky);
+	--color-ctp-sapphire: var(--ctp-sapphire);
+	--color-ctp-blue: var(--ctp-blue);
+	--color-ctp-lavender: var(--ctp-lavender);
+
+	--radius-sm: calc(var(--radius) * 0.6);
+	--radius-md: var(--radius);
+	--radius-lg: calc(var(--radius) * 1.4);
+	--radius-xl: calc(var(--radius) * 1.8);
+	--radius-2xl: calc(var(--radius) * 2.2);
+	--radius-3xl: calc(var(--radius) * 2.6);
+	--radius-4xl: calc(var(--radius) * 3);
+
+	--shadow-glow: var(--shadow-glow);
+	--gradient-hero: var(--gradient-hero);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		transition-duration: 0.01ms !important;
+	}
+}
+
+::selection {
+	background-color: var(--accent);
+	color: var(--paper);
+}
+
+/* Inputs/selects nativos (busca, filtros) ganham borda accent no focus —
+   regra global porque usar `focus:border-accent` junto de `border-rule`
+   gera conflito de border-color no Tailwind v4 (cssConflict). */
+input:focus,
+select:focus,
+textarea:focus {
+	border-color: var(--accent);
+}
+
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+	outline: 2px solid var(--accent);
+	outline-offset: 3px;
+	border-radius: 2px;
+}
+
+@layer base {
+	* {
+		@apply border-rule outline-accent/50;
+	}
+	body {
+		@apply bg-paper text-ink;
+	}
+	html {
+		@apply font-sans;
+		/* Reserva sempre o espaço do scrollbar vertical — evita que o conteúdo
+		   "encolha/empurre" quando uma página mais alta que a viewport aparece
+		   e o scrollbar entra/sai. */
+		scrollbar-gutter: stable;
+	}
+	button:not(:disabled) {
+		cursor: pointer;
+	}
+}
+
+/* Dropdown do Select (twui): esconde a scrollbar nativa — o scroll continua
+   por teclado/roda, mas sem a barra feia no visual mono. Fica aqui enquanto
+   não roda o twui 0.14.1 (que já traz o fix no componente). */
+.twui-select-popover {
+	scrollbar-width: none;
+}
+.twui-select-popover::-webkit-scrollbar {
+	display: none;
+}

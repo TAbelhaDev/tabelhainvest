@@ -1,0 +1,32 @@
+{
+	"$schema": "./node_modules/wrangler/config-schema.json",
+	"name": "tabelainvest",
+	"compatibility_date": "2026-08-01",
+	"compatibility_flags": ["nodejs_compat"],
+	"main": "worker/entry.js",
+	"alias": {
+		"$lib": "./src/lib"
+	},
+	"assets": { "binding": "ASSETS", "directory": ".svelte-kit/cloudflare" },
+	"workers_dev": true,
+	"preview_urls": true,
+	"vars": {
+		"ORIGIN": "https://tabelainvest.ianptkcs-023.workers.dev",
+		"BETTER_AUTH_URL": "https://tabelainvest.ianptkcs-023.workers.dev"
+		// Segredos (não commitados): BETTER_AUTH_SECRET, MASTER_KEY
+		// Configurados via `wrangler secret put <NOME>`
+	},
+	// Cron diário (refresh dos dados do investidor10: cotações, indicadores,
+	// payout) — ver PLANO.md "Camada de dados". O handler `scheduled` em
+	// worker/entry.js faz o refresh.
+	"triggers": { "crons": ["0 6 * * *"] },
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "tabelainvest-db",
+			"database_id": "71d0a08f-2f1b-4065-a3b0-a0ca1717e68e",
+			"migrations_dir": "drizzle"
+		}
+	],
+	"kv_namespaces": [{ "binding": "SESSIONS", "id": "a6eb6ade36f34f6ba2987879912569e5" }]
+}

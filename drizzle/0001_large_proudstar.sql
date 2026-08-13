@@ -1,0 +1,1 @@
+CREATE UNIQUE INDEX `dividends_asset_ex_value` ON `dividends` (`asset_id`,`ex_date`,`value`);
