@@ -3,7 +3,7 @@
 	import { page } from '$app/state';
 	import { toggleMode, mode } from 'mode-watcher';
 	import { resolve } from '$app/paths';
-	import { Status, StatusPill } from '@tabeladev/tabelawebui';
+	import { Status, StatusPill, Wordmark } from '@tabeladev/tabelawebui';
 	import { onMount } from 'svelte';
 	import type { LayoutData } from './$types';
 
@@ -57,7 +57,7 @@
 		class="sticky top-0 hidden h-svh w-60 shrink-0 flex-col border-r border-rule bg-paper-raised lg:flex"
 	>
 		<div class="px-5 pt-5 pb-4">
-			<span class="font-mono text-xl font-bold text-accent">TabelaInvest</span>
+			<Wordmark prefix="Tabela" suffix="Invest" />
 		</div>
 		<div class="border-t border-rule"></div>
 		<nav class="flex flex-1 flex-col gap-1 px-3 py-4">

@@ -8,7 +8,7 @@
 /*
  * Design system: "reading someone's source file" — mesma estética do
  * portfolio. Mono leva a estrutura (labels, datas, valores); bordas afiadas e
- * bem definidas; accent green (data-accent no app.html), nunca azul — glow e
+ * bem definidas; accent teal (data-accent no app.html), nunca azul — glow e
  * gradiente da landing saem da mesma cor.
  * Palette: Catppuccin (Latte / Mocha).
  */
@@ -56,15 +56,15 @@
 	--signal-soft: var(--twui-signal-soft);
 	--danger: var(--twui-danger);
 	--danger-soft: color-mix(in oklab, var(--twui-danger) 14%, var(--twui-paper));
-	/* Landing: acento escurecido — o green Latte cru dá 2.96:1 sobre a Base e
-	   reprova AA em texto pequeno; este dá 5.80:1. */
-	--accent-ink: #276b1a;
+	/* Landing: acento escurecido — o teal Latte cru dá ~3:1 sobre a Base;
+	   este dá ~5.8:1 (AA em texto pequeno). */
+	--accent-ink: #0e6065;
 	--shadow-glow:
-		0 0 0 1px var(--ctp-green),
-		0 20px 50px -20px color-mix(in oklab, var(--ctp-green) 45%, transparent);
+		0 0 0 1px var(--ctp-teal),
+		0 20px 50px -20px color-mix(in oklab, var(--ctp-teal) 45%, transparent);
 	--gradient-hero: radial-gradient(
 		ellipse 80% 60% at 50% -10%,
-		color-mix(in oklab, var(--ctp-green) 14%, transparent),
+		color-mix(in oklab, var(--ctp-teal) 14%, transparent),
 		transparent 70%
 	);
 
@@ -115,14 +115,14 @@
 	--signal: var(--twui-signal);
 	--signal-soft: var(--twui-signal-soft);
 
-	/* Landing — o green Mocha já é ~11:1 sobre a Base */
-	--accent-ink: var(--ctp-green);
+	/* Landing — o teal Mocha já é ~11:1 sobre a Base */
+	--accent-ink: var(--ctp-teal);
 	--shadow-glow:
-		0 0 0 1px var(--ctp-green),
-		0 20px 50px -20px color-mix(in oklab, var(--ctp-green) 55%, transparent);
+		0 0 0 1px var(--ctp-teal),
+		0 20px 50px -20px color-mix(in oklab, var(--ctp-teal) 55%, transparent);
 	--gradient-hero: radial-gradient(
 		ellipse 80% 60% at 50% -10%,
-		color-mix(in oklab, var(--ctp-green) 22%, transparent),
+		color-mix(in oklab, var(--ctp-teal) 22%, transparent),
 		transparent 70%
 	);
 
