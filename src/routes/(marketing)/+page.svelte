@@ -10,11 +10,12 @@
 	import StarIcon from '@lucide/svelte/icons/star';
 	import TableIcon from '@lucide/svelte/icons/table';
 	import TrendingUpIcon from '@lucide/svelte/icons/trending-up';
-	import { Button, Landing, SectionHeading } from '@tabeladev/tabelawebui';
+	import { Button, Landing, Wordmark } from '@tabeladev/tabelawebui';
+	import { PUBLIC_TABELAHUB_URL } from '$env/static/public';
 
 	const REPO_URL = 'https://github.com/TabelaDev/tabelainvest';
 
-	const TITLE = 'TabelaInvest — ações e FIIs da B3 sem mistério';
+	const TITLE = 'TabelaInvest: ações e FIIs da B3 sem mistério';
 	const DESCRIPTION =
 		'Garimpe ações e FIIs pelos indicadores (P/L, ROE, dividend yield), filtre e compare numa tabela direta. Recomendação por regras ou pela sua própria chave de IA.';
 
@@ -31,7 +32,7 @@
 			number: '02',
 			color: 'var(--ctp-sapphire)',
 			title: 'Você filtra',
-			body: 'P/L, P/VP, ROE, dividend yield, crescimento, setor e segmento — cada um com seus limites.'
+			body: 'P/L, P/VP, ROE, dividend yield, crescimento, setor e segmento: cada um com seus limites.'
 		},
 		{
 			number: '03',
@@ -53,7 +54,7 @@
 			iconBg: 'color-mix(in srgb, var(--ctp-mauve) 12%, transparent)',
 			iconColor: 'var(--ctp-mauve)',
 			title: 'IA opcional, regras sempre',
-			body: 'Sem API key, o TabelaInvest recomenda por regras transparentes. Com a sua chave, você escolhe o provedor e o modelo — e paga direto pra eles.'
+			body: 'Sem API key, o TabelaInvest recomenda por regras transparentes. Com a sua chave, você escolhe o provedor e o modelo, e paga direto pra eles.'
 		},
 		{
 			icon: shieldIcon,
@@ -100,7 +101,7 @@
 </script>
 
 {#snippet heroTitle()}
-	Tabela<span style="color: var(--twui-accent);">Invest</span>
+	<Wordmark prefix="Tabela" suffix="Invest" />
 {/snippet}
 
 {#snippet keyIcon()}
@@ -147,55 +148,41 @@
 	<meta name="twitter:description" content={DESCRIPTION} />
 </svelte:head>
 
-<div class="relative flex w-full flex-1 flex-col">
-	<div
-		aria-hidden="true"
-		class="pointer-events-none absolute inset-x-0 top-0 -z-10 h-150"
-		style="background-image: var(--gradient-hero)"
-	></div>
+<Landing>
+	<Landing.Hero
+		eyebrow="Garimpo de ações e FIIs da B3"
+		title={heroTitle}
+		lead="O TabelaInvest puxa os indicadores do investidor10, filtra e compara numa tabela direta. Recomendação por regras transparentes ou pela sua própria IA. Sem assinatura, sem caixa preta."
+		note="Dados públicos sincronizados todo dia. IA e estratégias configuráveis se você quiser."
+	>
+		{#snippet actions()}
+			<Button href="{PUBLIC_TABELAHUB_URL}/signup" variant="primary" size="lg">Começar</Button>
+			<Button href={REPO_URL} target="_blank" rel="noreferrer" variant="outline" size="lg">
+				<CodeXmlIcon class="size-4" />
+				Ver o código
+			</Button>
+		{/snippet}
+	</Landing.Hero>
 
-	<div class="flex w-full flex-col gap-24 px-6 pt-16 pb-8 md:pt-24">
-		<Landing.Hero
-			eyebrow="Garimpo de ações e FIIs da B3"
-			title={heroTitle}
-			lead="O TabelaInvest puxa os indicadores do investidor10, filtra e compara numa tabela direta. Recomendação por regras transparentes ou pela sua própria IA. Sem assinatura, sem caixa preta."
-			note="Dados públicos sincronizados todo dia. IA e estratégias configuráveis se você quiser."
-		>
-			{#snippet actions()}
-				<Button href={resolve('/signup')} variant="primary" size="lg">Começar</Button>
-				<Button href={REPO_URL} target="_blank" rel="noreferrer" variant="outline" size="lg">
-					<CodeXmlIcon class="size-4" />
-					Ver o código
-				</Button>
-			{/snippet}
-		</Landing.Hero>
+	<Landing.Section>
+		<Landing.Section.Heading eyebrow="Como funciona" title="Quatro passos do universo à decisão." />
+		<Landing.Steps {steps} />
+	</Landing.Section>
 
-		<section class="flex flex-col gap-8">
-			<SectionHeading eyebrow="Como funciona" title="Quatro passos do universo à decisão." />
-			<Landing.Steps {steps} />
-		</section>
-
-		<section class="flex flex-col gap-8">
-			<SectionHeading
-				eyebrow="Recursos"
-				title="O que ele faz e o que ele não faz com os seus dados."
-			/>
-			<Landing.Features {features} />
-		</section>
-
-		<section class="flex flex-col gap-8">
-			<SectionHeading
-				eyebrow="No radar"
-				title="O que vem depois."
-				lead="Nada disso existe ainda. Tá aqui porque o roadmap é público — igual o código."
-			/>
-			<Landing.Roadmap items={roadmap} />
-		</section>
-
-		<Landing.Footer
-			name="tabelainvest"
-			license="AGPL-3.0 · SvelteKit + Cloudflare Workers"
-			repoUrl={REPO_URL}
+	<Landing.Section>
+		<Landing.Section.Heading
+			eyebrow="Recursos"
+			title="O que ele faz e o que ele não faz com os seus dados."
 		/>
-	</div>
-</div>
+		<Landing.Features {features} />
+	</Landing.Section>
+
+	<Landing.Section>
+		<Landing.Section.Heading
+			eyebrow="No radar"
+			title="O que vem depois."
+			lead="Nada disso existe ainda. Tá aqui porque o roadmap é público: igual o código."
+		/>
+		<Landing.Roadmap items={roadmap} />
+	</Landing.Section>
+</Landing>

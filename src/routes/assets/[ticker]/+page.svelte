@@ -57,7 +57,7 @@
 </script>
 
 <svelte:head>
-	<title>{data.asset.ticker} — {data.asset.name} · TabelaInvest</title>
+	<title>{data.asset.ticker}: {data.asset.name} · TabelaInvest</title>
 </svelte:head>
 
 <div class="flex flex-col gap-6">
@@ -278,7 +278,7 @@
 				endpoint="/api/chat"
 				title={`Pergunte sobre ${data.asset.ticker}`}
 				placeholder={`Ex.: o que acha dos fundamentos de ${data.asset.ticker}?`}
-				emptyHint={`Pergunte algo sobre ${data.asset.ticker} — fundamentos, proventos, riscos.`}
+				emptyHint={`Pergunte algo sobre ${data.asset.ticker}: fundamentos, proventos, riscos.`}
 				buildBody={(history) => ({
 					ticker: data.asset.ticker,
 					messages: history.map((m) => ({ role: m.role, content: m.content }))

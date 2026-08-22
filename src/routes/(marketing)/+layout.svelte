@@ -1,18 +1,25 @@
 <script lang="ts">
-	import { resolve } from '$app/paths';
-	import { ThemeToggle, Wordmark } from '@tabeladev/tabelawebui';
+	import { MarketingShell, Button } from '@tabeladev/tabelawebui';
+	import { PUBLIC_TABELAHUB_URL, PUBLIC_APP_URL } from '$env/static/public';
 
 	let { children } = $props();
 </script>
 
-<div class="mx-auto flex min-h-svh w-full max-w-5xl flex-col border-x border-rule">
-	<header class="sticky top-0 z-40 border-b border-rule bg-paper/60 backdrop-blur-sm">
-		<div class="flex h-14 items-center justify-between gap-4 px-6">
-			<a href={resolve('/')}><Wordmark prefix="Tabela" suffix="Invest" /></a>
-			<ThemeToggle />
-		</div>
-	</header>
-	<main class="flex flex-1 flex-col">
-		{@render children()}
-	</main>
-</div>
+<MarketingShell
+	suffix="Invest"
+	footerLinks={[
+		{ href: `${PUBLIC_TABELAHUB_URL}/privacidade`, label: 'Privacidade' },
+		{ href: `${PUBLIC_TABELAHUB_URL}/termos`, label: 'Termos de uso' },
+		{ href: 'https://github.com/TabelaDev/tabelainvest', label: 'Código-fonte' }
+	]}
+	footerLicense="AGPL-3.0 · SvelteKit + Cloudflare Workers"
+>
+	{#snippet actions()}
+		<Button
+			href="{PUBLIC_TABELAHUB_URL}/login?redirect={encodeURIComponent(PUBLIC_APP_URL)}"
+			variant="ghost"
+			size="sm">Entrar</Button
+		>
+	{/snippet}
+	{@render children()}
+</MarketingShell>

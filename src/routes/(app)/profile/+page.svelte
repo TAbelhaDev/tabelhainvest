@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-	<title>Perfil — TabelaInvest</title>
+	<title>Perfil: TabelaInvest</title>
 </svelte:head>
 
 <div class="flex flex-col gap-6">

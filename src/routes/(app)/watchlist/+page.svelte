@@ -9,7 +9,7 @@
 </script>
 
 <svelte:head>
-	<title>Watchlist — TabelaInvest</title>
+	<title>Watchlist: TabelaInvest</title>
 </svelte:head>
 
 <div class="flex flex-col gap-6">
