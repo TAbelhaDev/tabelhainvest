@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Button, Card, Wordmark } from '@tabeladev/tabelawebui';
 	import { resolve } from '$app/paths';
-	import { PUBLIC_TABELAHUB_URL, PUBLIC_APP_URL } from '$env/static/public';
+	import { PUBLIC_TABELAUTH_URL, PUBLIC_APP_URL } from '$env/static/public';
 </script>
 
 <svelte:head>
@@ -21,9 +21,9 @@
 			<Card.Description>Redirecionando para o cadastro...</Card.Description>
 		</Card.Header>
 		<Card.Content>
-			<p class="text-sm text-ink-soft">O cadastro é feito pelo TabelaHub.</p>
+			<p class="text-sm text-ink-soft">O cadastro é feito pelo TabelaAuth.</p>
 			<Button
-				href="{PUBLIC_TABELAHUB_URL}/signup?redirect={encodeURIComponent(
+				href="{PUBLIC_TABELAUTH_URL}/signup?redirect={encodeURIComponent(
 					PUBLIC_APP_URL + '/api/auth/hub-callback'
 				)}"
 				class="w-full"

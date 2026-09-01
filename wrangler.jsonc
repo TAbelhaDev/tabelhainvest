@@ -12,7 +12,7 @@
 	"preview_urls": true,
 	"vars": {
 		"ORIGIN": "https://tabelainvest.ianptkcs-023.workers.dev",
-		"PUBLIC_TABELAHUB_URL": "https://tabelahub.ianptkcs-023.workers.dev",
+		"PUBLIC_TABELAUTH_URL": "https://tabelaauth.ianptkcs-023.workers.dev",
 		"PUBLIC_APP_URL": "https://tabelainvest.ianptkcs-023.workers.dev",
 		"BETTER_AUTH_URL": "https://tabelainvest.ianptkcs-023.workers.dev"
 		// Segredos (não commitados): BETTER_AUTH_SECRET, MASTER_KEY

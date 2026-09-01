@@ -1,8 +1,8 @@
 // Lightweight session management backed by KV.
 //
-// After the auth migration to tabelahub, tabelafin no longer manages passwords
+// After the auth migration to tabelaauth, tabelafin no longer manages passwords
 // or user accounts. It only needs to track "who is logged in" via a session
-// token stored in KV, created from the hub_token that tabelahub issues on
+// token stored in KV, created from the hub_token that tabelaauth issues on
 // successful login.
 
 const SESSION_COOKIE = 'tabelainvest_session_token';

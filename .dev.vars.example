@@ -6,7 +6,7 @@
 MASTER_KEY=placeholder
 BETTER_AUTH_SECRET=placeholder
 BETTER_AUTH_URL=http://localhost:5173
-PUBLIC_TABELAHUB_URL=http://localhost:4013
+PUBLIC_TABELAUTH_URL=http://localhost:4013
 PUBLIC_APP_URL=http://localhost:4010
 # Token do endpoint /api/refresh (produção). Em dev não é exigido.
 REFRESH_TOKEN=placeholder
