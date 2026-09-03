@@ -60,7 +60,6 @@
 	},
 	"dependencies": {
 		"@better-auth/drizzle-adapter": "^1.6.26",
-		"@tabeladev/tabelawebui": "0.25.0",
 		"@tabeladev/tabelawebui": "file:../tabelawebui",
 		"apexcharts": "^6.7.0",
 		"better-auth": "^1.6.26",
