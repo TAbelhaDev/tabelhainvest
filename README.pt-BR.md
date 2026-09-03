@@ -1,6 +1,6 @@
 <div align="center">
 
-# TabelaInvest
+# TAbelhaInvest
 
 **Garimpe ações e FIIs da B3 pelos indicadores, filtre e compare numa tabela direta — recomendações por regras ou com a sua própria IA (BYOK).**
 
@@ -9,7 +9,7 @@
 [![SvelteKit](https://img.shields.io/badge/SvelteKit-Svelte-ff3e00?style=flat-square&logo=svelte&logoColor=white)](https://kit.svelte.dev)
 [![Cloudflare Workers](https://img.shields.io/badge/Cloudflare-Workers-orange?style=flat-square&logo=cloudflare&logoColor=white)](https://workers.cloudflare.com)
 [![License: AGPL-3.0](https://img.shields.io/badge/license-AGPL--3.0-blue?style=flat-square)](LICENSE)
-[![Built with tabelawebui](https://img.shields.io/badge/theme-tabelawebui-d6b4f7?style=flat-square)](https://github.com/TAbelhaDev/tabelawebui)
+[![Built with tabelhawebui](https://img.shields.io/badge/theme-tabelhawebui-d6b4f7?style=flat-square)](https://github.com/TAbelhaDev/tabelhawebui)
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/ianptkcs)
 
@@ -52,7 +52,7 @@ como um app nativo, com atualização automática.
 
 ## Traga suas próprias credenciais
 
-Mesmo padrão BYOK do [TabelaFin](https://github.com/TAbelhaDev/tabelafin): cole
+Mesmo padrão BYOK do [TAbelhaFin](https://github.com/TAbelhaDev/tabelafin): cole
 sua própria API key (Anthropic, OpenAI ou DeepSeek) e escolha o modelo. Você
 paga sua própria inferência. Sua chave fica armazenada criptografada.
 
@@ -85,7 +85,7 @@ autenticação (email/senha via Better Auth).
 
 ## Fonte de dados
 
-**Não existe API oficial do investidor10.** O TabelaInvest consome os mesmos
+**Não existe API oficial do investidor10.** O TAbelhaInvest consome os mesmos
 endpoints internos `/api/*` que o site do investidor10 usa. Eles funcionam sem
 autenticação, mas são indocumentados e podem mudar sem aviso — toda a
 integração fica isolada num único módulo proxy. Veja o `PLANO.md` pra o design
@@ -122,6 +122,6 @@ Veja [CHANGELOG.md](CHANGELOG.md) para o histórico de versões.
 ## Licença
 
 [AGPL-3.0](LICENSE) — copyleft forte: você pode usar, modificar e até
-hospedar o TabelaInvest comercialmente, mas qualquer versão modificada, inclusive
+hospedar o TAbelhaInvest comercialmente, mas qualquer versão modificada, inclusive
 rodando como serviço via rede (SaaS), precisa continuar open source sob a
 mesma licença.

@@ -1,6 +1,6 @@
 // Encryption for ai_credentials (PLANO.md §IA — BYOK).
 //
-// AES-GCM with a random 96-bit nonce per write. Same scheme as TabelaFin:
+// AES-GCM with a random 96-bit nonce per write. Same scheme as TAbelhaFin:
 //
 //   * The key comes from HKDF (not a bare SHA-256) — a single hash is not a
 //     KDF; if the master key is ever a passphrase rather than 32 random bytes,

@@ -13,9 +13,9 @@
 	import { Button, Landing, Wordmark } from '@tabelhadev/tabelhawebui';
 	import { PUBLIC_TABELHAUTH_URL } from '$env/static/public';
 
-	const REPO_URL = 'https://github.com/TAbelhaDev/tabelainvest';
+	const REPO_URL = 'https://github.com/TAbelhaDev/tabelhainvest';
 
-	const TITLE = 'TabelaInvest: ações e FIIs da B3 sem mistério';
+	const TITLE = 'TAbelhaInvest: ações e FIIs da B3 sem mistério';
 	const DESCRIPTION =
 		'Garimpe ações e FIIs pelos indicadores (P/L, ROE, dividend yield), filtre e compare numa tabela direta. Recomendação por regras ou pela sua própria chave de IA.';
 
@@ -54,7 +54,7 @@
 			iconBg: 'color-mix(in srgb, var(--ctp-mauve) 12%, transparent)',
 			iconColor: 'var(--ctp-mauve)',
 			title: 'IA opcional, regras sempre',
-			body: 'Sem API key, o TabelaInvest recomenda por regras transparentes. Com a sua chave, você escolhe o provedor e o modelo, e paga direto pra eles.'
+			body: 'Sem API key, o TAbelhaInvest recomenda por regras transparentes. Com a sua chave, você escolhe o provedor e o modelo, e paga direto pra eles.'
 		},
 		{
 			icon: shieldIcon,
@@ -138,7 +138,7 @@
 	<meta name="description" content={DESCRIPTION} />
 	<link rel="canonical" href={canonical} />
 	<meta property="og:type" content="website" />
-	<meta property="og:site_name" content="TabelaInvest" />
+	<meta property="og:site_name" content="TAbelhaInvest" />
 	<meta property="og:locale" content="pt_BR" />
 	<meta property="og:title" content={TITLE} />
 	<meta property="og:description" content={DESCRIPTION} />
@@ -152,7 +152,7 @@
 	<Landing.Hero
 		eyebrow="Garimpo de ações e FIIs da B3"
 		title={heroTitle}
-		lead="O TabelaInvest puxa os indicadores do investidor10, filtra e compara numa tabela direta. Recomendação por regras transparentes ou pela sua própria IA. Sem assinatura, sem caixa preta."
+		lead="O TAbelhaInvest puxa os indicadores do investidor10, filtra e compara numa tabela direta. Recomendação por regras transparentes ou pela sua própria IA. Sem assinatura, sem caixa preta."
 		note="Dados públicos sincronizados todo dia. IA e estratégias configuráveis se você quiser."
 	>
 		{#snippet actions()}

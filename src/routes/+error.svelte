@@ -36,7 +36,7 @@
 </script>
 
 <svelte:head>
-	<title>Erro {status}: TabelaInvest</title>
+	<title>Erro {status}: TAbelhaInvest</title>
 </svelte:head>
 
 <ErrorPage {status} title={info.title} description={info.description} homeHref={resolve('/')}>

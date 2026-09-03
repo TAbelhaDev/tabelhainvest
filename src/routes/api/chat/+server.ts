@@ -42,7 +42,7 @@ export const POST: RequestHandler = async ({ request, platform, locals }) => {
 	// history follows.
 	const system: AiChatMessage = {
 		role: 'system',
-		content: `Você é um analista de investimentos brasileiro (B3), consultor do usuário do TabelaInvest.
+		content: `Você é um analista de investimentos brasileiro (B3), consultor do usuário do TAbelhaInvest.
 Responda em português do Brasil, de forma direta.
 Use somente os dados abaixo do ativo — não invente indicadores.
 Mencione que dados de mercado passados não garantem retorno futuro quando der uma opinião de compra/venda.

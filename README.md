@@ -1,6 +1,6 @@
 <div align="center">
 
-# TabelaInvest
+# TAbelhaInvest
 
 **Screen Brazilian stocks and REITs (FIIs) by fundamentals — filter, compare and get rule-based or BYOK-AI recommendations.**
 
@@ -9,7 +9,7 @@
 [![SvelteKit](https://img.shields.io/badge/SvelteKit-Svelte-ff3e00?style=flat-square&logo=svelte&logoColor=white)](https://kit.svelte.dev)
 [![Cloudflare Workers](https://img.shields.io/badge/Cloudflare-Workers-orange?style=flat-square&logo=cloudflare&logoColor=white)](https://workers.cloudflare.com)
 [![License: AGPL-3.0](https://img.shields.io/badge/license-AGPL--3.0-blue?style=flat-square)](LICENSE)
-[![Built with tabelawebui](https://img.shields.io/badge/theme-tabelawebui-d6b4f7?style=flat-square)](https://github.com/TAbelhaDev/tabelawebui)
+[![Built with tabelhawebui](https://img.shields.io/badge/theme-tabelhawebui-d6b4f7?style=flat-square)](https://github.com/TAbelhaDev/tabelhawebui)
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/ianptkcs)
 
@@ -53,7 +53,7 @@ native app, with automatic updates.
 ## Bring your own credentials
 
 The same BYOK pattern as
-[TabelaFin](https://github.com/TAbelhaDev/tabelafin): paste your own API key
+[TAbelhaFin](https://github.com/TAbelhaDev/tabelafin): paste your own API key
 (Anthropic, OpenAI or DeepSeek) and pick the model. You pay for your own
 inference. Your key is stored encrypted.
 
@@ -86,7 +86,7 @@ for authentication (email/password via Better Auth).
 
 ## Data source
 
-There is **no official investidor10 API**. TabelaInvest consumes the same
+There is **no official investidor10 API**. TAbelhaInvest consumes the same
 internal `/api/*` endpoints the investidor10 website itself uses. They work
 without authentication but are undocumented and can change without notice — the
 whole integration is isolated in a single proxy module. See `PLANO.md` for the
@@ -123,5 +123,5 @@ See [CHANGELOG.md](CHANGELOG.md) for the version history.
 ## License
 
 [AGPL-3.0](LICENSE) — strong copyleft: you may use, modify and even host
-TabelaInvest commercially, but any modified version, including one running as a
+TAbelhaInvest commercially, but any modified version, including one running as a
 network service (SaaS), has to stay open source under the same license.

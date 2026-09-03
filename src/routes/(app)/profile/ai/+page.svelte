@@ -48,7 +48,7 @@
 </script>
 
 <svelte:head>
-	<title>Configurar IA: TabelaInvest</title>
+	<title>Configurar IA: TAbelhaInvest</title>
 </svelte:head>
 
 <div class="mx-auto flex w-full max-w-md flex-col gap-6">

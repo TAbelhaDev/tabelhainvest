@@ -1,4 +1,4 @@
-# Contribuindo com o TabelaInvest
+# Contribuindo com o TAbelhaInvest
 
 [English](CONTRIBUTING.md) · **Português**
 

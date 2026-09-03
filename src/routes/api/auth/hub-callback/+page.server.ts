@@ -16,7 +16,7 @@ export const load: PageServerLoad = async ({ url, platform, cookies }) => {
 
 	try {
 		const exchangeRes = await fetch(
-			`${hubUrl}/api/auth/exchange?token=${encodeURIComponent(hubToken)}&appId=tabelainvest`
+			`${hubUrl}/api/auth/exchange?token=${encodeURIComponent(hubToken)}&appId=tabelhainvest`
 		);
 
 		if (!exchangeRes.ok) {

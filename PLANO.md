@@ -1,4 +1,4 @@
-# TabelaInvest — plano
+# TAbelhaInvest — plano
 
 Screener de ações + FIIs da B3 com dados do investidor10: filtros, ordenação,
 seleção, recomendação e IA opcional (BYOK). Open source, AGPL-3.0, mesmo padrão
@@ -129,9 +129,9 @@ filtra por classe.
 - Página de detalhe do ativo: indicadores, gráfico de preço, payout/DY,
   dividendos.
 
-**Regra tabelawebui:** se precisar de componente/feature de UI que o tabelawebui
+**Regra tabelhawebui:** se precisar de componente/feature de UI que o tabelhawebui
 ainda não tem (ex.: painel de filtro numérico por coluna, column-picker), criar
-**request no repo do tabelawebui** (`requests/`), nunca CSS paralelo no app.
+**request no repo do tabelhawebui** (`requests/`), nunca CSS paralelo no app.
 O `Table` atual já cobre o grosso do v1.
 
 ## IA (BYOK, opcional)

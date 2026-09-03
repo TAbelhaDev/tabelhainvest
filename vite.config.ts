@@ -44,8 +44,8 @@ export default defineConfig({
 			strategies: 'generateSW',
 			registerType: 'prompt',
 			manifest: {
-				name: 'TabelaInvest',
-				short_name: 'TabelaInvest',
+				name: 'TAbelhaInvest',
+				short_name: 'TAbelhaInvest',
 				description:
 					'Screener de ações e FIIs da B3 — filtre, compare e receba recomendações com base nos indicadores.',
 				theme_color: '#18181b',

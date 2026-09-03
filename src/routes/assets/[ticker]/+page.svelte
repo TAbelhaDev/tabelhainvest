@@ -57,7 +57,7 @@
 </script>
 
 <svelte:head>
-	<title>{data.asset.ticker}: {data.asset.name} · TabelaInvest</title>
+	<title>{data.asset.ticker}: {data.asset.name} · TAbelhaInvest</title>
 </svelte:head>
 
 <div class="flex flex-col gap-6">

@@ -78,4 +78,4 @@ Antes de abrir PR: `bun run check && bun run lint && bun run test && bun run bui
 
 Regras comuns aos apps web da TAbelhaDev (grupos de rota, tokens de tema, landing, SEO):
 `docs/convencoes-web.md` no repo do
-[tabelawebui](https://github.com/TAbelhaDev/tabelawebui). Não duplicar as regras aqui.
+[tabelhawebui](https://github.com/TAbelhaDev/tabelhawebui). Não duplicar as regras aqui.

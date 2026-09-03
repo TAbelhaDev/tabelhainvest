@@ -108,7 +108,7 @@
 </script>
 
 <svelte:head>
-	<title>Screener: TabelaInvest</title>
+	<title>Screener: TAbelhaInvest</title>
 </svelte:head>
 
 <div class="flex flex-col gap-6">

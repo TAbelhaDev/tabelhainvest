@@ -10,14 +10,14 @@
 	$effect(() => {
 		if ($offlineReady && !offlineToastShown) {
 			offlineToastShown = true;
-			toast.success('TabelaInvest está pronto para uso offline.');
+			toast.success('TAbelhaInvest está pronto para uso offline.');
 		}
 	});
 
 	$effect(() => {
 		if ($needRefresh && !refreshToastShown) {
 			refreshToastShown = true;
-			toast('Nova versão do TabelaInvest disponível.', {
+			toast('Nova versão do TAbelhaInvest disponível.', {
 				duration: Number.POSITIVE_INFINITY,
 				action: {
 					label: 'Atualizar',

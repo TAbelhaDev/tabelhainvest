@@ -133,7 +133,7 @@
 /* Estética do app é mono: sobrescreve a serif default da lib só no
    ChatMessage (que usa --twui-font-serif no corpo das mensagens). As seções
    de landing mantêm a serif da lib (Newsreader) — mesmo modelo da landing
-   do TabelaRPGDK. */
+   do TAbelhaRPGDK. */
 .twui-chat-message-bubble {
 	--twui-font-serif:
 		'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;

@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-	<title>Entrar: TabelaInvest</title>
+	<title>Entrar: TAbelhaInvest</title>
 </svelte:head>
 
 <div class="relative mx-auto flex min-h-svh max-w-md flex-col justify-center gap-6 p-6">
@@ -21,7 +21,7 @@
 			<Card.Description>Redirecionando para o login...</Card.Description>
 		</Card.Header>
 		<Card.Content>
-			<p class="text-sm text-ink-soft">O login é feito pelo TabelaAuth.</p>
+			<p class="text-sm text-ink-soft">O login é feito pelo TAbelhaAuth.</p>
 			<Button
 				href="{PUBLIC_TABELHAUTH_URL}/login?redirect={encodeURIComponent(
 					PUBLIC_APP_URL + '/api/auth/hub-callback'

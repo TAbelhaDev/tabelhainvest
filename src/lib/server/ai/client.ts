@@ -1,6 +1,6 @@
 // Shared AI dispatch for BYOK (PLANO.md §IA). The user's own provider/model/key
 // come from ai_credentials; the key is decrypted with MASTER_KEY. Streaming is
-// SSE to the client — same fetch()-only pattern as TabelaFin (no SDK, so it
+// SSE to the client — same fetch()-only pattern as TAbelhaFin (no SDK, so it
 // runs in workerd).
 //
 // Two entry points:
