@@ -9,7 +9,7 @@
 [![SvelteKit](https://img.shields.io/badge/SvelteKit-Svelte-ff3e00?style=flat-square&logo=svelte&logoColor=white)](https://kit.svelte.dev)
 [![Cloudflare Workers](https://img.shields.io/badge/Cloudflare-Workers-orange?style=flat-square&logo=cloudflare&logoColor=white)](https://workers.cloudflare.com)
 [![License: AGPL-3.0](https://img.shields.io/badge/license-AGPL--3.0-blue?style=flat-square)](LICENSE)
-[![Built with tabelawebui](https://img.shields.io/badge/theme-tabelawebui-d6b4f7?style=flat-square)](https://github.com/TabelaDev/tabelawebui)
+[![Built with tabelawebui](https://img.shields.io/badge/theme-tabelawebui-d6b4f7?style=flat-square)](https://github.com/TAbelhaDev/tabelawebui)
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/ianptkcs)
 
@@ -53,7 +53,7 @@ native app, with automatic updates.
 ## Bring your own credentials
 
 The same BYOK pattern as
-[TabelaFin](https://github.com/TabelaDev/tabelafin): paste your own API key
+[TabelaFin](https://github.com/TAbelhaDev/tabelafin): paste your own API key
 (Anthropic, OpenAI or DeepSeek) and pick the model. You pay for your own
 inference. Your key is stored encrypted.
 
@@ -65,7 +65,7 @@ Stack: SvelteKit + Cloudflare Workers (D1 + KV), Bun as the package manager.
 bun install
 
 # apply the migrations to the local D1
-bunx wrangler d1 migrations apply tabelainvest-db --local
+bunx wrangler d1 migrations apply tabelhainvest-db --local
 
 bun run dev
 ```

@@ -1,9 +1,9 @@
-# tabelainvest — contexto essencial
+# tabelhainvest — contexto essencial
 
 Screener de ações + FIIs da B3 (dados do investidor10) com filtros, ordenação,
 seleção e recomendação. IA opcional (BYOK). Repo **aberto**, AGPL-3.0. Antes de
 mexer, leia o `README.md` (produto), o `CONTRIBUTING.md` (política de linguagem
-de toda a TabelaDev) e o `PLANO.md` (escopo e fases).
+de toda a TAbelhaDev) e o `PLANO.md` (escopo e fases).
 
 ## Stack
 
@@ -18,7 +18,7 @@ de toda a TabelaDev) e o `PLANO.md` (escopo e fases).
   `scheduled` — refresh diário dos dados do investidor10 (`0 6 * * *`). Por isso
   existem **dois** wrangler configs: `wrangler.jsonc` (real) e
   `wrangler.adapter.jsonc` (só pro adapter não sobrescrever o `entry.js`).
-- **UI:** `@tabeladev/tabelawebui` (registry). Tailwind v4, um único stylesheet em
+- **UI:** `@tabelhadev/tabelhawebui` (registry). Tailwind v4, um único stylesheet em
   `src/routes/layout.css`. Sem shadcn.
 - **PWA:** `@vite-pwa/sveltekit` + `src/lib/ReloadPrompt.svelte`.
 
@@ -76,6 +76,6 @@ Antes de abrir PR: `bun run check && bun run lint && bun run test && bun run bui
 
 ## Convenções compartilhadas
 
-Regras comuns aos apps web da TabelaDev (grupos de rota, tokens de tema, landing, SEO):
+Regras comuns aos apps web da TAbelhaDev (grupos de rota, tokens de tema, landing, SEO):
 `docs/convencoes-web.md` no repo do
-[tabelawebui](https://github.com/TabelaDev/tabelawebui). Não duplicar as regras aqui.
+[tabelawebui](https://github.com/TAbelhaDev/tabelawebui). Não duplicar as regras aqui.

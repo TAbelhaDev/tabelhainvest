@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	import { Card, Table } from '@tabeladev/tabelawebui';
+	import { Card, Table } from '@tabelhadev/tabelhawebui';
 	import type { PageData } from './$types';
 
 	let { data }: { data: PageData } = $props();

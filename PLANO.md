@@ -35,7 +35,7 @@ Espelha o `tabelafin` (repo `~/codigo/tabeladev/tabelafin`):
 - **Cron:** `worker/entry.js` embrulha o worker pra expor o handler
   `scheduled`. Dois wrangler configs: `wrangler.jsonc` (real) e
   `wrangler.adapter.jsonc` (só pro adapter não sobrescrever o `entry.js`).
-- **UI:** `@tabeladev/tabelawebui` (registry). Tailwind v4, um único stylesheet
+- **UI:** `@tabelhadev/tabelhawebui` (registry). Tailwind v4, um único stylesheet
   em `src/routes/layout.css`. Sem shadcn.
 - **PWA:** `@vite-pwa/sveltekit` + `src/lib/ReloadPrompt.svelte`.
 - **Criptografia BYOK:** `MASTER_KEY` + HKDF → AES-256-GCM, contexto-bound
@@ -120,7 +120,7 @@ filtra por classe.
 
 ## Screener
 
-- Tabela do `@tabeladev/tabelawebui` (`Table.svelte` já tem sort, filtro global,
+- Tabela do `@tabelhadev/tabelhawebui` (`Table.svelte` já tem sort, filtro global,
   paginação, seleção de linha).
 - Painel de filtros por indicador (min/max numérico) + multi-select de
   setor/segmento/tipo.
@@ -153,8 +153,8 @@ Funcionalidades:
 ## Fases de implementação
 
 > Status (2026-08-13): projeto completo, deploy em produção ativo
-> (https://tabelainvest.ianptkcs-023.workers.dev) e repo público
-> (https://github.com/TabelaDev/tabelainvest).
+> (https://tabelhainvest.tabelhadev.workers.dev) e repo público
+> (https://github.com/TAbelhaDev/tabelainvest).
 
 1. **Scaffold** — ✅ base do tabelafin (config, auth, layout, landing, PWA,
    scripts), D1/KV bindings reais. Repo `~/codigo/tabeladev/tabelainvest`.

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
 	import { resolve } from '$app/paths';
-	import { Button, Input, Label, Card } from '@tabeladev/tabelawebui';
+	import { Button, Input, Label, Card } from '@tabelhadev/tabelhawebui';
 
 	let {
 		action = '?/default',

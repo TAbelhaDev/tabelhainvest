@@ -15,7 +15,7 @@ este projeto segue [Semantic Versioning](https://semver.org/lang/pt-BR/).
   credenciais de IA, PWA instalável, cron diário registrado.
 - Estrutura inicial do repositório open source (licença AGPL-3.0, templates de
   issue/PR, workflows de CI e release).
-- Recursos Cloudflare reais (D1 `tabelainvest-db`, KV `tabelainvest-sessions`).
+- Recursos Cloudflare reais (D1 `tabelhainvest-db`, KV `tabelainvest-sessions`).
 - Autenticação via Better Auth (email/senha), guard de rota do app, landing e
   páginas placeholder de screener/watchlist/perfil.
 - Configuração de IA BYOK (chave criptografada, provider/modelo escolhíveis)
@@ -45,4 +45,4 @@ este projeto segue [Semantic Versioning](https://semver.org/lang/pt-BR/).
 ### Pendente
 
 - Nada em aberto no código. Deploy em produção ativo em
-  https://tabelainvest.ianptkcs-023.workers.dev com cron diário `0 6 * * *`.
+  https://tabelhainvest.tabelhadev.workers.dev com cron diário `0 6 * * *`.

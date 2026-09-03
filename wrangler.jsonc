@@ -1,6 +1,6 @@
 {
 	"$schema": "./node_modules/wrangler/config-schema.json",
-	"name": "tabelainvest",
+	"name": "tabelhainvest",
 	"compatibility_date": "2026-08-01",
 	"compatibility_flags": ["nodejs_compat"],
 	"main": "worker/entry.js",
@@ -11,10 +11,10 @@
 	"workers_dev": true,
 	"preview_urls": true,
 	"vars": {
-		"ORIGIN": "https://tabelainvest.ianptkcs-023.workers.dev",
-		"PUBLIC_TABELAUTH_URL": "https://tabelaauth.ianptkcs-023.workers.dev",
-		"PUBLIC_APP_URL": "https://tabelainvest.ianptkcs-023.workers.dev",
-		"BETTER_AUTH_URL": "https://tabelainvest.ianptkcs-023.workers.dev"
+		"ORIGIN": "https://tabelhainvest.tabelhadev.workers.dev",
+		"PUBLIC_TABELHAUTH_URL": "https://tabelhaauth.tabelhadev.workers.dev",
+		"PUBLIC_APP_URL": "https://tabelhainvest.tabelhadev.workers.dev",
+		"BETTER_AUTH_URL": "https://tabelhainvest.tabelhadev.workers.dev"
 		// Segredos (não commitados): BETTER_AUTH_SECRET, MASTER_KEY
 		// Configurados via `wrangler secret put <NOME>`
 	},
@@ -25,10 +25,10 @@
 	"d1_databases": [
 		{
 			"binding": "DB",
-			"database_name": "tabelainvest-db",
-			"database_id": "71d0a08f-2f1b-4065-a3b0-a0ca1717e68e",
+			"database_name": "tabelhainvest-db",
+			"database_id": "d205f4bb-b981-47a2-8493-9dc10daf747a",
 			"migrations_dir": "drizzle"
 		}
 	],
-	"kv_namespaces": [{ "binding": "SESSIONS", "id": "a6eb6ade36f34f6ba2987879912569e5" }]
+	"kv_namespaces": [{ "binding": "SESSIONS", "id": "8047968a52c14cb3a6aceade0dada445" }]
 }

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
 	import { resolve } from '$app/paths';
-	import { Button, Card } from '@tabeladev/tabelawebui';
+	import { Button, Card } from '@tabelhadev/tabelhawebui';
 	import Chart from '$lib/Chart.svelte';
 	import ChatPanel from '$lib/ChatPanel.svelte';
 	import type { ApexOptions } from 'apexcharts';

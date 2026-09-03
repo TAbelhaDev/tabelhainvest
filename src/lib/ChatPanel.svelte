@@ -5,7 +5,7 @@
 	//   title     — panel header
 	//   placeholder — input placeholder
 	//   emptyHint — text shown when there is no conversation yet
-	import { Button } from '@tabeladev/tabelawebui';
+	import { Button } from '@tabelhadev/tabelhawebui';
 
 	let {
 		endpoint,

@@ -2,7 +2,7 @@
 	import './layout.css';
 	import { ModeWatcher } from 'mode-watcher';
 	import { page } from '$app/state';
-	import { Toaster, toast } from '@tabeladev/tabelawebui';
+	import { Toaster, toast } from '@tabelhadev/tabelhawebui';
 	import { ToastType } from '$lib/enums/toast-type';
 	import { pwaInfo } from 'virtual:pwa-info';
 	import { getFlash } from 'sveltekit-flash-message';

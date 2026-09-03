@@ -1,5 +1,5 @@
 @import 'tailwindcss';
-@import '@tabeladev/tabelawebui/theme.css';
+@import '@tabelhadev/tabelhawebui/theme.css';
 @import '@fontsource-variable/jetbrains-mono';
 @import '@fontsource-variable/newsreader';
 
@@ -15,7 +15,7 @@
 
 /* ── Catppuccin Latte (tema claro) ───────────────────────────────────────── */
 :root {
-	/* Tokens vêm da lib @tabeladev/tabelawebui (theme.css) — uma fonte de verdade. */
+	/* Tokens vêm da lib @tabelhadev/tabelhawebui (theme.css) — uma fonte de verdade. */
 	--ctp-base: var(--twui-latte-base, #eff1f5);
 	--ctp-mantle: var(--twui-latte-mantle, #e6e9ef);
 	--ctp-crust: var(--twui-latte-crust, #dce0e8);

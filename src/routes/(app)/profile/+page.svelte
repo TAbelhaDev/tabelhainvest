@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	import { Button, Card, Divider } from '@tabeladev/tabelawebui';
+	import { Button, Card, Divider } from '@tabelhadev/tabelhawebui';
 	import type { PageData } from './$types';
 
 	let { data }: { data: PageData } = $props();

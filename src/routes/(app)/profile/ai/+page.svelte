@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Button, Card, Input, Label, Select } from '@tabeladev/tabelawebui';
+	import { Button, Card, Input, Label, Select } from '@tabelhadev/tabelhawebui';
 	import { invalidateAll } from '$app/navigation';
 	import { resolve } from '$app/paths';
 	import { AI_PROVIDERS, type AiProvider } from '$lib/ai-providers';

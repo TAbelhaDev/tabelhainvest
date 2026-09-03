@@ -10,10 +10,10 @@
 	import StarIcon from '@lucide/svelte/icons/star';
 	import TableIcon from '@lucide/svelte/icons/table';
 	import TrendingUpIcon from '@lucide/svelte/icons/trending-up';
-	import { Button, Landing, Wordmark } from '@tabeladev/tabelawebui';
-	import { PUBLIC_TABELAUTH_URL } from '$env/static/public';
+	import { Button, Landing, Wordmark } from '@tabelhadev/tabelhawebui';
+	import { PUBLIC_TABELHAUTH_URL } from '$env/static/public';
 
-	const REPO_URL = 'https://github.com/TabelaDev/tabelainvest';
+	const REPO_URL = 'https://github.com/TAbelhaDev/tabelainvest';
 
 	const TITLE = 'TabelaInvest: ações e FIIs da B3 sem mistério';
 	const DESCRIPTION =
@@ -156,7 +156,7 @@
 		note="Dados públicos sincronizados todo dia. IA e estratégias configuráveis se você quiser."
 	>
 		{#snippet actions()}
-			<Button href="{PUBLIC_TABELAUTH_URL}/signup" variant="primary" size="lg">Começar</Button>
+			<Button href="{PUBLIC_TABELHAUTH_URL}/signup" variant="primary" size="lg">Começar</Button>
 			<Button href={REPO_URL} target="_blank" rel="noreferrer" variant="outline" size="lg">
 				<CodeXmlIcon class="size-4" />
 				Ver o código

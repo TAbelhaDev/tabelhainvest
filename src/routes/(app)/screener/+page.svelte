@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
 	import { resolve } from '$app/paths';
-	import { Button, Card, Input, Label, MultiSelect, Select, Table } from '@tabeladev/tabelawebui';
+	import { Button, Card, Input, Label, MultiSelect, Select, Table } from '@tabelhadev/tabelhawebui';
 	import { SvelteURLSearchParams } from 'svelte/reactivity';
 	import ChatPanel from '$lib/ChatPanel.svelte';
 	import { STRATEGIES, type StrategyId } from '$lib/screener/strategies';

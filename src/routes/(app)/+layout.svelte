@@ -3,7 +3,7 @@
 	import { page } from '$app/state';
 	import { toggleMode, mode } from 'mode-watcher';
 	import { resolve } from '$app/paths';
-	import { Status, StatusPill, Wordmark } from '@tabeladev/tabelawebui';
+	import { Status, StatusPill, Wordmark } from '@tabelhadev/tabelhawebui';
 	import { onMount } from 'svelte';
 	import type { LayoutData } from './$types';
 
